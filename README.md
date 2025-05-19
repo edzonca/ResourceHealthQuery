@@ -1,6 +1,6 @@
 Please note :
 
- - in all queries we remove UserInitiated event
+ - In all queries we remove UserInitiated event
  - To correlate row from same event we use CorrelationId
  - The duration of events is calculated with the difference of the first event and the last event
 
@@ -29,7 +29,7 @@ AzureActivity
 | extend type = tostring(parse_json(Properties).type)
 | summarize count() by ResourceId
 
-## Create a timechart of Resource Health event by ResourceId
+# Create a timechart of Resource Health event by ResourceId
 
 AzureActivity
 | where Category == "ResourceHealth"
